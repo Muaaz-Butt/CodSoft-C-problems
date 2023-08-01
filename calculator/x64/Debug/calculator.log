@@ -1,0 +1,3 @@
+﻿  calculator.cpp
+E:\CodSoft C++ problems\calculator\calculator.cpp(21,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  calculator.vcxproj -> E:\CodSoft C++ problems\calculator\x64\Debug\calculator.exe
