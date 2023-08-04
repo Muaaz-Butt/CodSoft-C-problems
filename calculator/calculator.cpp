@@ -1,58 +1,78 @@
 #include <iostream>
+#include <iomanip>
+
+#include "Calculator.h"
 
 using namespace std;
 
-double sum(double& num1, double& num2) {
-	double sum = num1 + num2;
-	return sum;
+Calculator::Calculator() {
+	num1 = 0.0;
+	num2 = 0.0;
 }
 
-double subtract(double& num1, double& num2) {
-	double subtract = num1 - num2;
-	return subtract;
+Calculator::Calculator(double num1, double num2) :num1(num1), num2(num2) {}
+
+double Calculator::sum() {   
+	return num1 + num2;
 }
 
-double multiplication(double& num1, double& num2) {
-	double multiply = num1 * num2;
-	return multiply;
+double Calculator::subtract() {
+	return num1 - num2;
 }
 
-double division(double& num1, double& num2) {
-	int divide = num1 / num2;
-	return divide;
+double Calculator::multiplication() {
+	return num1 * num2;
 }
 
-void input(double& num1,double& num2) {
+double Calculator::division() {
+	return num1 / num2;
+}
+
+void Calculator::input() {
 	cout << "Enter number 1: ";
 	cin >> num1;
 	cout << "Enter number 2: ";
 	cin >> num2;
 }
 
-void operatorSelectionAndCalling(double& num1,double& num2) {
+double Calculator::getNumber1()const {
+	return num1;
+}
+
+double Calculator::getNumber2()const {
+	return num2;
+}
+
+void Calculator::setNumber1(double num1) {
+	this->num1 = num1;
+}
+
+void Calculator::setNumber2(double num2) {
+	this->num2 = num2;
+}
+
+void Calculator::operatorSelectionAndCalling() {
+	input();
 	char choice;
 	cout << "Enter + to add two operators\nEnter - to subtract two operators\nEnter * to multiply two operators\nEnter / to divide two operators";
 	cout << "Enter operator which you want to perform: ";
 	cin >> choice;
-	if (choice == '+') {
-		cout<<sum(num1,num2);
-	}
-	else if (choice == '-') {
-		cout<<subtract(num1, num2);
-	}
-	else if (choice == '*') {
-		cout<<multiplication(num1, num2);
-	}
-	else if (choice == '/') {
-		cout<<division(num1, num2);
-	}
-	else {
+	cout << fixed << setprecision(2);
+	switch (choice) {
+	case '+':
+		cout << sum();
+		break;
+	case '-':
+		cout << subtract();
+		break;
+	case '*':
+		cout << multiplication();
+		break;
+	case '/':
+		cout << division();
+		break;
+	default:
 		cout << "Wrong operator";
 	}
 }
-
-int main() {
-	double num1, num2;
-	input(num1, num2);
-	operatorSelectionAndCalling(num1, num2);
-}
+	
