@@ -1,14 +1,25 @@
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
+#include <stdexcept>
 
 #include "Game.h"
 
 using namespace std;
 
-int Game::randomNumberGenerator() {
+void inputUserNum(int& userNum) {
+	cout << "Enter the number which you guess (1 - 100): ";
+	cin >> userNum;
+	if (cin.fail()) {
+		cin.clear();
+		cin.ignore();
+		throw runtime_error("**** Value must be integer ****");
+	}
+}
+
+int randomNumberGenerator() {
 	int randomNum;
-	srand(time(0));      
+	srand(time(0));
 	randomNum = 1 + (rand() % 100);       // generate random number only between 1 and 100
 	return randomNum;
 }
@@ -16,35 +27,25 @@ int Game::randomNumberGenerator() {
 void Game::play() {
 	int randomNum = randomNumberGenerator();
 	int userNum;
-	char choice = 'y';
 	bool flag = true;
 	do {
-		flag = true;
-		do {
-			cout << "Enter the number which you guess: ";
-			cin >> userNum;
-			if (randomNum == userNum) {
-				cout << "\n------------------Congratulations! Guessed number is correct----------------------\n\n";
-				cout << "Random number was: " << randomNum<<"\n\n";
-				flag = false;
-			}
-			else if (userNum > randomNum) {
-				cout << "------------Too High----------------\n";
-			}
-			else {
-				cout << "------------Too Low------------------\n";
-			}
-			if (randomNum != userNum) {
-				cout << "Do you want to quit (y/n): ";
-				cin >> choice;
-				cout << "\n";
-				if (choice == 'y') {
-					cout << "Random number was: " << randomNum << "\n\n";
-					flag = false;
-				}
-			}
-		} while (flag);
-		cout << "Do you want to play again (y/n): ";
-		cin >> choice;
-	} while (choice == 'y');
+		try {
+			inputUserNum(userNum);
+		}
+		catch (runtime_error& e) {
+			cerr << e.what();
+			return;
+		}
+		if (randomNum == userNum) {
+			cout << "\n-----Congratulations! Guessed number is correct-----\n\n";
+			cout << "Random number was: " << randomNum << "\n\n";
+			flag = false;
+		}
+		else if (userNum > randomNum) {
+			cout << "------------Too High----------------\n";
+		}
+		else {
+			cout << "------------Too Low------------------\n";
+		}
+	} while (flag);
 }

@@ -2,7 +2,6 @@
 #define FUNCTIONS_H
 
 namespace Game {
-	int randomNumberGenerator();
 	void play();
 }
 
