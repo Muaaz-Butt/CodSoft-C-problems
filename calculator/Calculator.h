@@ -13,12 +13,10 @@ public:
 	double subtract();
 	double multiplication();
 	double division();
-	void input();
 	double getNumber1()const;
 	double getNumber2()const;
 	void setNumber1(double num1);
 	void setNumber2(double num2);
-	void operatorSelectionAndCalling();
 };
 
 #endif CALCULATOR_H

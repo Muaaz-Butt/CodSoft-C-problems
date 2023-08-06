@@ -1,6 +1,11 @@
+#include "Dashboard.h"
 #include "Calculator.h"
 
 int main() {
 	Calculator calculator;
-	calculator.operatorSelectionAndCalling();
+	int choice;
+	do {
+		operatorSelectionAndCalling(calculator);
+		terminateFromProgram(choice);
+	} while (choice != 0);
 }

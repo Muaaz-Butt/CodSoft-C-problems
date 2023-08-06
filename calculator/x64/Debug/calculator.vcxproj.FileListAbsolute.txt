@@ -1,1 +1,2 @@
 E:\CodSoft C++ problems\calculator\x64\Debug\calculator.exe
+E:\Github\CodSoft-C-problems\calculator\x64\Debug\calculator.exe
