@@ -23,5 +23,4 @@ public:
 	void displayMoviesList()const;
 };
 
-
 #endif MOVIES_H

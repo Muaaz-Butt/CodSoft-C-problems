@@ -2,9 +2,11 @@
 #ifndef CINEMA_H
 #define CINEMA_H
 
+#include "Movies.h"
+
 class Cinema {
 public:
-	void show();
+	static void show();
 };
 
 

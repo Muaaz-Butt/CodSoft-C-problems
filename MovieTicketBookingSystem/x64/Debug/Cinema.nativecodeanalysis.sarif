@@ -1,0 +1,59 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.36.32532.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///e:/codsoft c++ problems/movieticketbookingsystem/cinema.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "93896c4b8028a69d38f18ea38876bd73f682dd3979020ce303832f9c5919c30b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/codsoft c++ problems/movieticketbookingsystem/cinema.h"
+          },
+          "hashes": {
+            "sha-256": "9822ca6c9a207e81bdcd86a1ec052de7c9e90374798ecffa39d6f07875e52b0d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/codsoft c++ problems/movieticketbookingsystem/movies.h"
+          },
+          "hashes": {
+            "sha-256": "0126e6e5da35af2421a6b0a936772f46cb50596c4aaf4143a2881146ed951841"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/codsoft c++ problems/movieticketbookingsystem/booking.h"
+          },
+          "hashes": {
+            "sha-256": "ac4172b859db20263882063e2a71a90fe70317a157e9514e5ce5cc6483e5eb05"
+          }
+        }
+      ]
+    }
+  ]
+}

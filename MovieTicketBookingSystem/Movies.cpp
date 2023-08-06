@@ -35,6 +35,7 @@ double Movies::getCost()const {
 	return cost;
 }
 void Movies::displayMoviesList()const {
-	cout << setw(8);
-	cout << movieName << "       " << duration << "          " << cost << "\n";
+	cout << fixed << left << setw(15) << movieName;
+	cout << fixed << left << setw(15) << duration;
+	cout << fixed << left << setw(15) << setprecision(2) << cost << "\n";
 }

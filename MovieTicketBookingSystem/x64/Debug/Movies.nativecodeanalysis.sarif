@@ -1,0 +1,43 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.36.32532.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///e:/codsoft c++ problems/movieticketbookingsystem/movies.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "edca558aa2984405da4c9ce2395563f10cc952ea082f258da9266fe6d3d9616a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/codsoft c++ problems/movieticketbookingsystem/movies.h"
+          },
+          "hashes": {
+            "sha-256": "0126e6e5da35af2421a6b0a936772f46cb50596c4aaf4143a2881146ed951841"
+          }
+        }
+      ]
+    }
+  ]
+}

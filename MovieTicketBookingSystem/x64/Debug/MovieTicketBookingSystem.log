@@ -1,2 +1,6 @@
-﻿  Booking.cpp
+﻿  Cinema.cpp
+E:\CodSoft C++ problems\MovieTicketBookingSystem\Cinema.cpp(69,33): warning C4101: 'choice': unreferenced local variable
+  Movies.cpp
+  driver.cpp
+  Generating Code...
   MovieTicketBookingSystem.vcxproj -> E:\CodSoft C++ problems\MovieTicketBookingSystem\x64\Debug\MovieTicketBookingSystem.exe
